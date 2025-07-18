@@ -11,7 +11,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 
 app.post('/api/chat', (req, res) => {
-  const { message } = req.body;
+  const { message } = JSON.parse(JSON.stringify(req.body));
   const { intent, message: reply } = detectIntent(message);
 
   return res.json({
