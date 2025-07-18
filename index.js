@@ -15,8 +15,8 @@ app.post('/api/chat', (req, res) => {
   const { intent, message: reply } = detectIntent(message);
 
   return res.json({
-    name:'Danish',
-    reply: `👩‍💼 Hello : ${reply}`,
+    sender:'Danish',
+    text: `👩‍💼 Hello : ${reply}`,
     // intent,
   });
 });

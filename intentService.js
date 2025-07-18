@@ -3,6 +3,10 @@
 const { correctSentence } = require("./spellCorrectSentence");
 
 const intents = {
+    hello: {
+    keywords: ['hello', 'hii', 'hi'],
+    message: 'How can, I help you ?',
+  },
   login: {
     keywords: ['login', 'sign in', 'log in', 'access account'],
     message: 'To login, go to https://your-site.com/login and enter your credentials.',
