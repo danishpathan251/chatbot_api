@@ -7,6 +7,10 @@ const intents = {
     keywords: ['hello', 'hii', 'hi'],
     message: (name) => `Hello${name ? ' ' + name : ''}! 👋`
   },
+greet: {
+  keywords: ['my name is', 'i am'],
+  message: (name) => `Hello${name ? ' ' + name : ''}! Nice to meet you. How can I help you today? 👋`
+},
   login: {
     keywords: ['login', 'sign in', 'log in', 'access account'],
     message: () => 'To login, go to https://alpha-ms.xyz/login and enter your credentials.'
