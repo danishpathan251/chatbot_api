@@ -21,6 +21,8 @@ const intents = {
   },
   software: {
     keywords: [
+        'and alpha ms',
+      'is alpha ms',
       'about software',
       'about alpha-ms',
       'related to alpha-ms',
@@ -65,7 +67,7 @@ function detectIntent(text) {
   }
 
   if (responses.length === 0) {
-    return { intent: 'unknown', message: 'Sorry, I can’t help with that.' };
+    return { intent: 'unknown', message: 'Hmm, I didn’t quite get that. Could you please try rephrasing your question so I can assist you better?' };
   }
 
   return { intent: 'multi', message: responses.join('\n\n') };
