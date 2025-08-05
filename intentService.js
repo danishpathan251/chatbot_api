@@ -20,14 +20,15 @@ greet: {
     message: () => 'To create an account, please visit https://alpha-ms.xyz/signup.'
   },
   support: {
-    keywords: ['help', 'support', 'customer service'],
-    message: () => 'For help, please visit our support page at https://alpha-ms.xyz/support or contact support@alpha-ms.xyz.'
+    keywords: ['support', 'customer service'],
+    message: () => 'For help or support, please visit our support page at https://alpha-ms.xyz/support or contact support@alpha-ms.xyz.'
   },
   software: {
     keywords: [
         'and alpha ms',
       'is alpha ms',
       'about software',
+      'about this software',
       'about alpha-ms',
       'related to alpha-ms',
       'what is alpha-ms',
