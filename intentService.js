@@ -3,37 +3,37 @@
 const { correctSentence } = require("./spellCorrectSentence");
 
 const intents = {
-    hello: {
+  hello: {
     keywords: ['hello', 'hii', 'hi'],
-    message: 'How can, I help you ?',
+    message: (name) => `Hello${name ? ' ' + name : ''}! 👋`
   },
   login: {
     keywords: ['login', 'sign in', 'log in', 'access account'],
-    message: 'To login, go to https://your-site.com/login and enter your credentials.',
+    message: () => 'To login, go to https://alpha-ms.xyz/login and enter your credentials.'
   },
   signup: {
     keywords: ['signup', 'sign up', 'create account', 'register', 'create my account'],
-    message: 'To create an account, please visit https://your-site.com/signup.',
+    message: () => 'To create an account, please visit https://alpha-ms.xyz/signup.'
   },
   support: {
     keywords: ['help', 'support', 'customer service'],
-    message: 'For help, please visit our support page at https://your-site.com/support or contact support@your-site.com.',
+    message: () => 'For help, please visit our support page at https://alpha-ms.xyz/support or contact support@alpha-ms.xyz.'
   },
   software: {
     keywords: [
-      'about software', 
-      'about alpha-ms', 
-      'related to alpha-ms', 
-      'what is alpha-ms', 
-      'alpha-ms information', 
+      'about software',
+      'about alpha-ms',
+      'related to alpha-ms',
+      'what is alpha-ms',
+      'alpha-ms information',
       'software details',
       'what is alpha ms'
     ],
-    message: 'Alpha-MS is our powerful software solution designed to help manage your operations efficiently. For more details, visit https://your-site.com/alpha-ms.'
+    message: () => 'Alpha-MS is our powerful software solution designed to help manage your operations efficiently. For more details, visit https://alpha-ms.xyz.'
   },
-    freeTrial: {
+  freeTrial: {
     keywords: ['free trial', 'trial', 'start trial', 'get trial', 'try for free'],
-    message: `You can take the free trial by following these steps:
+    message: () => `You can take the free trial by following these steps:
 
 • Download the app from the official store  
 • Sign up as an Admin user  
@@ -41,22 +41,34 @@ const intents = {
 • You'll automatically get a **7-day free trial**  
 • Start using all features during the trial period
 
-👉 Get started here: https://your-site.com/free-trial`,
-  },
+👉 Get started here: https://alpha-ms.xyz/Trail`
+  }
 };
 
+// Extract name from text like "I am Danish" or "My name is Danish"
+function extractName(text) {
+  const match = text.match(/\b(?:i am|my name is)\s+([A-Z][a-z]+)/i);
+  return match ? match[1] : null;
+}
 
+// Detect multiple intents and combine responses
 function detectIntent(text) {
-  const corrected = correctSentence(text);
+  const corrected = correctSentence(text).toLowerCase();
+  const name = extractName(text);
+
+  const responses = [];
 
   for (const [intent, { keywords, message }] of Object.entries(intents)) {
-    if (keywords.some((kw) => corrected.includes(kw))) {
-      return { intent, message };
+    if (keywords.some((kw) => corrected.includes(kw.toLowerCase()))) {
+      responses.push(typeof message === "function" ? message(name) : message);
     }
   }
 
-  return { intent: 'unknown', message: 'Sorry, I can’t help with that.' };
-}
+  if (responses.length === 0) {
+    return { intent: 'unknown', message: 'Sorry, I can’t help with that.' };
+  }
 
+  return { intent: 'multi', message: responses.join('\n\n') };
+}
 
 module.exports = { detectIntent };
