@@ -16,7 +16,7 @@ app.post('/api/chat', (req, res) => {
 
   return res.json({
     sender:'Danish',
-    text: `👩‍💼 Hello : ${reply}`,
+    text: `${reply}`,
     // intent,
   });
 });
