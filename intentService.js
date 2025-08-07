@@ -43,9 +43,9 @@ const intents = {
       'what is alpha ms', 'describe alpha ms', 'alpha ms use case', 'alpha ms overview'
     ],
     message: () => `
-      <strong>Alpha-MS</strong> is a powerful cloud-based <strong>Attendance Management System</strong> designed to streamline employee tracking, shift scheduling, and real-time punch-in/out monitoring.<br/><br/>
+      <strong>Alpha-MS</strong> is a powerful cloud-based <strong>Attendance Management System</strong> designed to streamline employee tracking, shift scheduling, and real-time punch-in/out monitoring.<br/>
       <u>Key features include:</u><br/>
-      • Real-time <strong>attendance tracking</strong><br/>
+      • Real-time <strong>attendance tracking</strong>
       • Mobile <strong>punch-in/out</strong> with location data<br/>
       • <strong>Leave and holiday management</strong><br/>
       • Automated <strong>shift scheduling</strong><br/>
