@@ -25,17 +25,18 @@ greet: {
   },
 use: {
   keywords: ['how to use', 'how can i use'],
-  message: () =>
-    `It's very simple to use Alpha-MS!  
-Here’s how you can get started:
+message: () => `
+It's very simple to use Alpha-MS!<br/><br/>
+Here’s how you can get started:<br/><br/>
 
-1. **Sign up** as an Admin at [alpha-ms.xyz](https://alpha-ms.xyz)  
-2. **Login** to your dashboard  
-3. **Add employees**, departments, and shifts  
-4. Employees can then **punch in/out** using the mobile app  
-5. You can **track attendance, manage leaves, and generate reports**
+1. <strong>Sign up</strong> as an Admin at <a href="https://alpha-ms.xyz" target="_blank">alpha-ms.xyz</a><br/>
+2. <strong>Login</strong> to your dashboard<br/>
+3. <strong>Add employees</strong>, departments, and shifts<br/>
+4. Employees can then <strong>punch in/out</strong> using the mobile app<br/>
+5. You can <strong>track attendance, manage leaves, and generate reports</strong><br/><br/>
 
-If you need help at any step, feel free to reach out to our support: **support@alpha-ms.xyz**`
+If you need help at any step, feel free to contact support at <strong>support@alpha-ms.xyz</strong>
+`
 },
  software: {
   keywords: [
