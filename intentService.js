@@ -5,110 +5,96 @@ const { correctSentence } = require("./spellCorrectSentence");
 const intents = {
   hello: {
     keywords: ['hello', 'hii', 'hi'],
-    message: (name) => `Hello${name ? ' ' + name : ''}! 👋`
+    message: (name) => name ? null : `Hello! 👋`
   },
-greet: {
-  keywords: ['Hello my name is', 'Hello i am','i am','my name is'],
-  message: (name) => `Hello${name ? ' ' + name : ''}! Nice to meet you. How can I help you today? 👋`
-},
+  greet: {
+    keywords: ['hello my name is', 'hello i am','i am','my name is'],
+    message: (name) => name ? `Hello <strong>${name}</strong>! Nice to meet you. How can I help you today? 👋` : null
+  },
   login: {
     keywords: ['login', 'sign in', 'log in', 'access account'],
-    message: () => 'To login, go to https://alpha-ms.xyz/login and enter your credentials.'
+    message: () => 'To <strong>login</strong>, go to <a href="https://alpha-ms.xyz/login" target="_blank">alpha-ms.xyz/login</a> and enter your credentials.'
   },
   signup: {
     keywords: ['signup', 'sign up', 'create account', 'register', 'create my account'],
-    message: () => 'To create an account, please visit https://alpha-ms.xyz/signup.'
+    message: () => 'To <strong>create an account</strong>, please visit <a href="https://alpha-ms.xyz/signup" target="_blank">alpha-ms.xyz/signup</a>.'
   },
   support: {
-    keywords: ['support', 'customer service','Please help me'],
-    message: () => 'For help or support, please visit our support page at https://alpha-ms.xyz/support or contact support@alpha-ms.xyz.'
+    keywords: ['support', 'customer service', 'please help me'],
+    message: () => 'For <strong>help or support</strong>, visit <a href="https://alpha-ms.xyz/support" target="_blank">alpha-ms.xyz/support</a> or contact <strong>support@alpha-ms.xyz</strong>.'
   },
-use: {
-  keywords: ['how to use', 'how can i use'],
-message: () => `
-It's very simple to use Alpha-MS!<br/><br/>
-Here’s how you can get started:<br/><br/>
-
-1. <strong>Sign up</strong> as an Admin at <a href="https://alpha-ms.xyz" target="_blank">alpha-ms.xyz</a><br/>
-2. <strong>Login</strong> to your dashboard<br/>
-3. <strong>Add employees</strong>, departments, and shifts<br/>
-4. Employees can then <strong>punch in/out</strong> using the mobile app<br/>
-5. You can <strong>track attendance, manage leaves, and generate reports</strong><br/><br/>
-
-If you need help at any step, feel free to contact support at <strong>support@alpha-ms.xyz</strong>
-`
-},
- software: {
-  keywords: [
-    'and alpha ms',
-    'is alpha ms',
-    'about software',
-    'about this software',
-    'about alpha-ms',
-    'about alpha ms',
-    'related to alpha-ms',
-    'what is alpha-ms',
-    'alpha-ms information',
-    'software details',
-    'what is alpha ms',
-    'describe alpha ms',
-    'alpha ms use case',
-    'alpha ms overview'
-  ],
-  message: () =>
-    `Alpha-MS is a powerful cloud-based **Attendance Management System** designed to streamline employee tracking, shift scheduling, and real-time punch-in/out monitoring.  
-      
-Key features include:  
-• Real-time attendance tracking  
-• Mobile punch-in/out with location data  
-• Leave and holiday management  
-• Automated shift scheduling  
-• Detailed reports and analytics  
-• Admin dashboard with complete control
-
-Alpha-MS helps businesses improve workforce productivity, reduce manual errors, and ensure better compliance.
-
-👉 Learn more at: https://alpha-ms.xyz`
-}
-,
+  use: {
+    keywords: ['how to use', 'how can i use'],
+    message: () => `
+      It's very simple to use <strong>Alpha-MS</strong>!<br/><br/>
+      Here’s how you can get started:<br/><br/>
+      1. <strong>Sign up</strong> as an Admin at <a href="https://alpha-ms.xyz" target="_blank">alpha-ms.xyz</a><br/>
+      2. <strong>Login</strong> to your dashboard<br/>
+      3. <strong>Add employees</strong>, departments, and shifts<br/>
+      4. Employees can then <strong>punch in/out</strong> using the mobile app<br/>
+      5. You can <strong>track attendance</strong>, manage leaves, and generate reports<br/><br/>
+      If you need help, contact <strong>support@alpha-ms.xyz</strong>`
+  },
+  software: {
+    keywords: [
+      'and alpha ms', 'is alpha ms', 'about software', 'about this software',
+      'about alpha-ms', 'about alpha ms', 'related to alpha-ms',
+      'what is alpha-ms', 'alpha-ms information', 'software details',
+      'what is alpha ms', 'describe alpha ms', 'alpha ms use case', 'alpha ms overview'
+    ],
+    message: () => `
+      <strong>Alpha-MS</strong> is a powerful cloud-based <strong>Attendance Management System</strong> designed to streamline employee tracking, shift scheduling, and real-time punch-in/out monitoring.<br/><br/>
+      <u>Key features include:</u><br/>
+      • Real-time <strong>attendance tracking</strong><br/>
+      • Mobile <strong>punch-in/out</strong> with location data<br/>
+      • <strong>Leave and holiday management</strong><br/>
+      • Automated <strong>shift scheduling</strong><br/>
+      • Detailed <strong>reports and analytics</strong><br/>
+      • Admin dashboard with full control<br/><br/>
+      <strong>Alpha-MS</strong> boosts workforce productivity, reduces manual errors, and ensures compliance.<br/><br/>
+      👉 Learn more at: <a href="https://alpha-ms.xyz" target="_blank">alpha-ms.xyz</a>`
+  },
   freeTrial: {
     keywords: ['free trial', 'trial', 'start trial', 'get trial', 'try for free'],
-    message: () => `You can take the free trial by following these steps:
-
-• Download the app from the official store  
-• Sign up as an Admin user  
-• Choose your preferred plan  
-• You'll automatically get a **7-day free trial**  
-• Start using all features during the trial period
-
-👉 Get started here: https://alpha-ms.xyz/Trail`
+    message: () => `
+      You can start your <strong>7-day free trial</strong> like this:<br/><br/>
+      • Download the app from the official store<br/>
+      • <strong>Sign up</strong> as an Admin user<br/>
+      • Choose a plan (no payment needed for trial)<br/>
+      • Enjoy all features for 7 days<br/><br/>
+      👉 Start now: <a href="https://alpha-ms.xyz/Trail" target="_blank">alpha-ms.xyz/Trail</a>`
   }
 };
 
-// Extract name from text like "I am Danish" or "My name is Danish"
+// Extract name from input text
 function extractName(text) {
   const match = text.match(/\b(?:i am|my name is)\s+([A-Z][a-z]+)/i);
   return match ? match[1] : null;
 }
 
-// Detect multiple intents and combine responses
 function detectIntent(text) {
   const corrected = correctSentence(text).toLowerCase();
   const name = extractName(text);
-
-  const responses = [];
+  const responses = new Set();
 
   for (const [intent, { keywords, message }] of Object.entries(intents)) {
     if (keywords.some((kw) => corrected.includes(kw.toLowerCase()))) {
-      responses.push(typeof message === "function" ? message(name) : message);
+      const response = typeof message === "function" ? message(name) : message;
+      if (response) responses.add(response);
     }
   }
 
-  if (responses.length === 0) {
-    return { intent: 'unknown', message: 'Hmm, I didn’t quite get that. Could you please try rephrasing your question so I can assist you better?' };
+  if (responses.size === 0) {
+    return {
+      intent: 'unknown',
+      message: 'Hmm, I didn’t quite get that. Could you please rephrase your question so I can assist you better?'
+    };
   }
 
-  return { intent: 'multi', message: responses.join('\n\n') };
+  return {
+    intent: 'multi',
+    message: Array.from(responses).join('<br/><br/>')
+  };
 }
 
 module.exports = { detectIntent };
