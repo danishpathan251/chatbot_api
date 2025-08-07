@@ -44,14 +44,14 @@ const intents = {
     ],
     message: () => `
       <strong>Alpha-MS</strong> is a powerful cloud-based <strong>Attendance Management System</strong> designed to streamline employee tracking, shift scheduling, and real-time punch-in/out monitoring.<br/>
-      <u>Key features include:</u><br/>
+      <u>Key features include:</u>
       • Real-time <strong>attendance tracking</strong>
-      • Mobile <strong>punch-in/out</strong> with location data<br/>
-      • <strong>Leave and holiday management</strong><br/>
-      • Automated <strong>shift scheduling</strong><br/>
-      • Detailed <strong>reports and analytics</strong><br/>
-      • Admin dashboard with full control<br/><br/>
-      <strong>Alpha-MS</strong> boosts workforce productivity, reduces manual errors, and ensures compliance.<br/><br/>
+      • Mobile <strong>punch-in/out</strong> with location data
+      • <strong>Leave and holiday management</strong>
+      • Automated <strong>shift scheduling</strong>
+      • Detailed <strong>reports and analytics</strong>
+      • Admin dashboard with full control<br/>
+      <strong>Alpha-MS</strong> boosts workforce productivity, reduces manual errors, and ensures compliance.<br/>
       👉 Learn more at: <a href="https://alpha-ms.xyz" target="_blank">alpha-ms.xyz</a>`
   },
   freeTrial: {
