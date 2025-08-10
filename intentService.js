@@ -86,10 +86,10 @@ const intents = {
   basicPlanDetails: {
   keywords: ['basic plan', 'basic plan details', 'basic plan price', 'basic plan cost', 'basic plan features'],
   message: () => `
-    <strong>Basic Plan – ₹249/month</strong><br/><br/>
+    <strong>Basic Plan – ₹249/month</strong><br/>
     • 1 Store<br/>
     • Up to 10 Employees<br/>
-    • Perfect for small businesses starting out<br/><br/>
+    • Perfect for small businesses starting out<br/>
     👉 Subscribe now: <a href="https://alpha-ms.xyz/plans#basic" target="_blank">alpha-ms.xyz/plans#basic</a>
   `
 },
@@ -97,10 +97,10 @@ const intents = {
 proPlanDetails: {
   keywords: ['pro plan', 'pro plan details', 'pro plan price', 'pro plan cost', 'pro plan features'],
   message: () => `
-    <strong>Pro Plan – ₹349/month</strong><br/><br/>
+    <strong>Pro Plan – ₹349/month</strong><br/>
     • 2 Stores<br/>
     • Up to 15 Employees per store<br/>
-    • Ideal for growing businesses<br/><br/>
+    • Ideal for growing businesses<br/>
     👉 Subscribe now: <a href="https://alpha-ms.xyz/plans#pro" target="_blank">alpha-ms.xyz/plans#pro</a>
   `
 },
@@ -108,10 +108,10 @@ proPlanDetails: {
 enterprisePlanDetails: {
   keywords: ['enterprise plan', 'enterprise plan details', 'enterprise plan price', 'enterprise plan cost', 'enterprise plan features'],
   message: () => `
-    <strong>Enterprise Plan – ₹499/month</strong><br/><br/>
+    <strong>Enterprise Plan – ₹499/month</strong><br/>
     • 5 Stores<br/>
     • Unlimited Employees per store<br/>
-    • Best for large-scale operations<br/><br/>
+    • Best for large-scale operations<br/>
     👉 Subscribe now: <a href="https://alpha-ms.xyz/plans#enterprise" target="_blank">alpha-ms.xyz/plans#enterprise</a>
   `
 }
