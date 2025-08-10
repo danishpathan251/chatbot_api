@@ -67,18 +67,18 @@ const intents = {
   planDetails: {
   keywords: ['plan details', 'pricing', 'plans', 'subscription', 'pricing details', 'package', 'cost', 'rates'],
   message: () => `
-    Here are our subscription plans:<br/><br/>
+    Here are our subscription plans:<br/>
     <strong>1️⃣ Basic Plan – ₹249/month</strong><br/>
     • 1 Store<br/>
-    • Up to 10 Employees<br/><br/>
+    • Up to 10 Employees<br/>
     
     <strong>2️⃣ Pro Plan – ₹349/month</strong><br/>
     • 2 Stores<br/>
-    • Up to 15 Employees per store<br/><br/>
+    • Up to 15 Employees per store<br/>
     
     <strong>3️⃣ Enterprise Plan – ₹499/month</strong><br/>
     • 5 Stores<br/>
-    • Unlimited Employees per store<br/><br/>
+    • Unlimited Employees per store<br/>
     
     👉 Learn more or subscribe: <a href="https://alpha-ms.xyz/plans" target="_blank">alpha-ms.xyz/plans</a>
   `
