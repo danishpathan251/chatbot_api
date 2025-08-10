@@ -70,15 +70,15 @@ const intents = {
     Here are our subscription plans:<br/>
     <strong>1️⃣ Basic Plan – ₹249/month</strong><br/>
     • 1 Store
-    • Up to 10 Employees<br/>
+    • Up to 10 Employees
     
     <strong>2️⃣ Pro Plan – ₹349/month</strong><br/>
     • 2 Stores
-    • Up to 15 Employees per store<br/>
+    • Up to 15 Employees per store
     
     <strong>3️⃣ Enterprise Plan – ₹499/month</strong><br/>
     • 5 Stores
-    • Unlimited Employees per store<br/>
+    • Unlimited Employees per store
     
     👉 Learn more or subscribe: <a href="https://alpha-ms.xyz/plans" target="_blank">alpha-ms.xyz/plans</a>
   `
