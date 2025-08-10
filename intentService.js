@@ -26,8 +26,8 @@ const intents = {
   use: {
     keywords: ['how to use', 'how can i use'],
     message: () => `
-      It's very simple to use <strong>Alpha-MS</strong>!<br/><br/>
-      Here’s how you can get started:<br/><br/>
+      It's very simple to use <strong>Alpha-MS</strong>!<br/>
+      Here’s how you can get started:<br/>
       1. <strong>Sign up</strong> as an Admin at <a href="https://alpha-ms.xyz" target="_blank">alpha-ms.xyz</a><br/>
       2. <strong>Login</strong> to your dashboard<br/>
       3. <strong>Add employees</strong>, departments, and shifts<br/>
@@ -63,7 +63,59 @@ const intents = {
       • Choose a plan (no payment needed for trial)<br/>
       • Enjoy all features for 7 days<br/><br/>
       👉 Start now: <a href="https://alpha-ms.xyz/Trail" target="_blank">alpha-ms.xyz/Trail</a>`
-  }
+  },
+  planDetails: {
+  keywords: ['plan details', 'pricing', 'plans', 'subscription', 'pricing details', 'package', 'cost', 'rates'],
+  message: () => `
+    Here are our subscription plans:<br/><br/>
+    <strong>1️⃣ Basic Plan – ₹249/month</strong><br/>
+    • 1 Store<br/>
+    • Up to 10 Employees<br/><br/>
+    
+    <strong>2️⃣ Pro Plan – ₹349/month</strong><br/>
+    • 2 Stores<br/>
+    • Up to 15 Employees per store<br/><br/>
+    
+    <strong>3️⃣ Enterprise Plan – ₹499/month</strong><br/>
+    • 5 Stores<br/>
+    • Unlimited Employees per store<br/><br/>
+    
+    👉 Learn more or subscribe: <a href="https://alpha-ms.xyz/plans" target="_blank">alpha-ms.xyz/plans</a>
+  `
+},
+  basicPlanDetails: {
+  keywords: ['basic plan', 'basic plan details', 'basic plan price', 'basic plan cost', 'basic plan features'],
+  message: () => `
+    <strong>Basic Plan – ₹249/month</strong><br/><br/>
+    • 1 Store<br/>
+    • Up to 10 Employees<br/>
+    • Perfect for small businesses starting out<br/><br/>
+    👉 Subscribe now: <a href="https://alpha-ms.xyz/plans#basic" target="_blank">alpha-ms.xyz/plans#basic</a>
+  `
+},
+
+proPlanDetails: {
+  keywords: ['pro plan', 'pro plan details', 'pro plan price', 'pro plan cost', 'pro plan features'],
+  message: () => `
+    <strong>Pro Plan – ₹349/month</strong><br/><br/>
+    • 2 Stores<br/>
+    • Up to 15 Employees per store<br/>
+    • Ideal for growing businesses<br/><br/>
+    👉 Subscribe now: <a href="https://alpha-ms.xyz/plans#pro" target="_blank">alpha-ms.xyz/plans#pro</a>
+  `
+},
+
+enterprisePlanDetails: {
+  keywords: ['enterprise plan', 'enterprise plan details', 'enterprise plan price', 'enterprise plan cost', 'enterprise plan features'],
+  message: () => `
+    <strong>Enterprise Plan – ₹499/month</strong><br/><br/>
+    • 5 Stores<br/>
+    • Unlimited Employees per store<br/>
+    • Best for large-scale operations<br/><br/>
+    👉 Subscribe now: <a href="https://alpha-ms.xyz/plans#enterprise" target="_blank">alpha-ms.xyz/plans#enterprise</a>
+  `
+}
+
 };
 
 // Extract name from input text
