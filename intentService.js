@@ -80,7 +80,7 @@ const intents = {
     • 5 Stores
     • Unlimited Employees per store
     
-    👉 Learn more or subscribe: <a href="https://alpha-ms.xyz/plans" target="_blank">alpha-ms.xyz/plans</a>
+    👉 Learn more or subscribe: <a href="https://alpha-ms.xyz/plan-details" target="_blank">alpha-ms.xyz/plans</a>
   `
 },
   basicPlanDetails: {
@@ -90,7 +90,7 @@ const intents = {
     • 1 Store<br/>
     • Up to 10 Employees<br/>
     • Perfect for small businesses starting out<br/>
-    👉 Subscribe now: <a href="https://alpha-ms.xyz/plans#basic" target="_blank">alpha-ms.xyz/plans#basic</a>
+    👉 Subscribe now: <a href="https://alpha-ms.xyz/plan-details#basic" target="_blank">alpha-ms.xyz/plans#basic</a>
   `
 },
 
@@ -101,7 +101,7 @@ proPlanDetails: {
     • 2 Stores<br/>
     • Up to 15 Employees per store<br/>
     • Ideal for growing businesses<br/>
-    👉 Subscribe now: <a href="https://alpha-ms.xyz/plans#pro" target="_blank">alpha-ms.xyz/plans#pro</a>
+    👉 Subscribe now: <a href="https://alpha-ms.xyz/plan-details#pro" target="_blank">alpha-ms.xyz/plans#pro</a>
   `
 },
 
@@ -112,7 +112,7 @@ enterprisePlanDetails: {
     • 5 Stores<br/>
     • Unlimited Employees per store<br/>
     • Best for large-scale operations<br/>
-    👉 Subscribe now: <a href="https://alpha-ms.xyz/plans#enterprise" target="_blank">alpha-ms.xyz/plans#enterprise</a>
+    👉 Subscribe now: <a href="https://alpha-ms.xyz/plan-details#enterprise" target="_blank">alpha-ms.xyz/plans#enterprise</a>
   `
 }
 
