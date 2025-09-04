@@ -45,7 +45,7 @@ const intents = {
       'and alpha ms', 'is alpha ms', 'about software', 'about this software',
       'about alpha-ms', 'about alpha ms', 'related to alpha-ms',
       'what is alpha-ms', 'alpha-ms information', 'software details',
-      'what is alpha ms', 'describe alpha ms', 'alpha ms use case', 'alpha ms overview','about yourself'
+      'what is alpha ms', 'describe alpha ms', 'alpha ms use case', 'alpha ms overview','about yourself','about your self'
     ],
     message: () => `
       <strong>Alpha-MS</strong> is a powerful cloud-based <strong>Attendance Management System</strong> designed to streamline employee tracking, shift scheduling, and real-time punch-in/out monitoring.<br/>
