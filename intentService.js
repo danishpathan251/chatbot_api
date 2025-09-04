@@ -122,6 +122,7 @@ enterprisePlanDetails: {
 },
 alphaMskyahai: {
   keywords: [
+      'alpha kya hai',
     'alpha ms kya hai',
     'alpha-ms kya hai',
     'alpha ms k baare me batao',
