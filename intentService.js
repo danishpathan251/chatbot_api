@@ -23,10 +23,15 @@ const intents = {
     keywords: ['support', 'customer service', 'please help me'],
     message: () => 'For <strong>help or support</strong>, visit <a href="https://alpha-ms.xyz/support" target="_blank">alpha-ms.xyz/support</a> or contact <strong>support@alpha-ms.xyz</strong>.'
   },
+ thanks: {
+  keywords: ['Thank you', 'Thanks'],
+  message: () => 'You are most welcome! If you need any help, I’m here to assist you.'
+},
+
   use: {
     keywords: ['how to use', 'how can i use'],
     message: () => `
-      It's very simple to use <strong>Alpha-MS</strong>!<br/>
+      It's very simple to use <strong>Alpha-MS</strong>!<br/>. 
       Here’s how you can get started:<br/>
       1. <strong>Sign up</strong> as an Admin at <a href="https://alpha-ms.xyz" target="_blank">alpha-ms.xyz</a><br/>
       2. <strong>Login</strong> to your dashboard<br/>
@@ -40,7 +45,7 @@ const intents = {
       'and alpha ms', 'is alpha ms', 'about software', 'about this software',
       'about alpha-ms', 'about alpha ms', 'related to alpha-ms',
       'what is alpha-ms', 'alpha-ms information', 'software details',
-      'what is alpha ms', 'describe alpha ms', 'alpha ms use case', 'alpha ms overview'
+      'what is alpha ms', 'describe alpha ms', 'alpha ms use case', 'alpha ms overview','about yourself'
     ],
     message: () => `
       <strong>Alpha-MS</strong> is a powerful cloud-based <strong>Attendance Management System</strong> designed to streamline employee tracking, shift scheduling, and real-time punch-in/out monitoring.<br/>
@@ -114,13 +119,51 @@ enterprisePlanDetails: {
     • Best for large-scale operations<br/>
     👉 Subscribe now: <a href="https://alpha-ms.xyz/plan-details#enterprise" target="_blank">alpha-ms.xyz/plans#enterprise</a>
   `
+},
+alphaMskyahai: {
+  keywords: [
+    'alpha ms kya hai',
+    'alpha-ms kya hai',
+    'alpha ms k baare me batao',
+    'alpha-ms k baare me batao'
+  ],
+  message: () => `
+    <strong>Alpha-MS</strong> ek cloud-based <strong>Attendance Management System</strong> hai, jo employee tracking, shift scheduling aur real-time punch-in/out monitoring ko streamline karne ke liye design kiya gaya hai.<br/>
+  `
+},
+kaiseuse: { 
+  keywords: [
+    'kis tarah use',
+    'kaise use',
+    'kaise istemal',
+    'use kaise karein',
+    'kaam kaise kare',
+    'istamal karna sikhaye',
+    'use karne ka tarika',
+    'alpha ms kaise use karein',
+    'alpha-ms kaise istemal kare'
+  ], 
+  message: () => `
+    <strong>Alpha-MS</strong> ka use karna bahut hi simple hai!<br/><br/>
+    Suru karne ke liye aapko ye steps follow karne honge:<br/>
+    1. <strong>Sign up</strong> karein as an Admin 👉 <a href="https://alpha-ms.xyz" target="_blank">alpha-ms.xyz</a><br/>
+    2. Apne dashboard me <strong>Login</strong> karein<br/>
+    3. <strong>Employees</strong>, departments aur shifts add karein<br/>
+    4. Employees apne mobile app ke through <strong>Punch In/Out</strong> kar sakte hain<br/>
+    5. Aap <strong>Attendance track</strong> kar sakte hain, leaves manage kar sakte hain aur reports generate kar sakte hain<br/>
+    6. System me <strong>Shift scheduling</strong>, <strong>Leave management</strong>, aur <strong>Automated reports</strong> ka option bhi milta hai<br/>
+    7. Aap chahe to <strong>Notifications & Alerts</strong> enable karke real-time updates bhi paa sakte hain<br/><br/>
+    Agar aapko madad chahiye ho to sampark karein 👉 <strong>support@alpha-ms.xyz</strong>
+  `
 }
+
+
 
 };
 
 // Extract name from input text
 function extractName(text) {
-  const match = text.match(/\b(?:i am|my name is)\s+([A-Z][a-z]+)/i);
+  const match = text.match(/\b(?:i am |my name is)\s+([A-Z][a-z]+)/i);
   return match ? match[1] : null;
 }
 
